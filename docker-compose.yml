@@ -1,0 +1,32 @@
+version: "3.8"
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: chefaa-mysql
+    volumes:
+      - "./mysql/data/db:/var/lib/mysql"
+    environment:
+      MYSQL_DATABASE: chefaa
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: 123456
+    restart: on-failure
+    ports:
+    - "3307:3306"
+  chefaa-app:
+    build: ./
+    expose:
+      - "9000"
+    container_name: chefaa-app
+    volumes:
+      - "./app:/var/www/html"
+  nginx:
+    build: ./nginx
+    ports:
+      - "8080:80"
+    container_name: chefaa-nginx
+    volumes:
+      - "./app:/var/www/html"
+    depends_on:
+      - chefaa-app
+
