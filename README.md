@@ -5,11 +5,11 @@ Chefaa Store is Built By Laravel With Docker.
 ## Prerequisites
 To get started, you will need on Your Windows : 
 
-- **git Install** - `[Download](https://git-scm.com/downloads) .`
+- **git Install** - [Download](https://git-scm.com/downloads) .
 
 - **Ubuntu Installed from Windows Store**  - `Search in Windows Store For "Ubuntu" and Install it.`
 
-- **Docker Installed** - `[Install Guid](https://docs.docker.com/desktop/windows/install/)`
+- **Docker Installed** - [Install Guid](https://docs.docker.com/desktop/windows/install/)
 After installing the docker desktop, open the docker application and go to settings.
 In **Settings** > **Resources** > **WSL INTEGRATION**, make sure to turn on the “Enable integration with additional distros”.
 
