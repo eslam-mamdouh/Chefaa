@@ -15,6 +15,6 @@ use App\Http\Controllers\PharmacyController;
 */
 
 
-Route::get("/" , [Product::class , 'index']);
+Route::get("/" , [ProductController::class , 'index']);
 Route::resource('/products' , ProductController::class);
 Route::resource('/pharmacies' , PharmacyController::class);
